@@ -40,7 +40,7 @@ class Chef {
 //            food = "푸딩";
 //       return food;
 //    }
-    public String cook(Egg egg,Cheese cheese) {
+    public String cook(Egg egg,Cheese cheese) {     // 클래스도 자료형
         return "스크럼블에그";
     }
     public String cook(Rice rice,Egg egg) {
