@@ -17,7 +17,7 @@ public class Exam10 {
         };
         // 여기에서 코딩하세요
 
-        int avg = 0;
+       double avg = 0;
         for(int i = 0; i < points.length; i++) {
             avg += points[i];
         }
@@ -27,9 +27,10 @@ public class Exam10 {
         for(int i = 0; i < histo.length; i++) {
             histo[i] = "";
             for (int j = 0; j < points.length; j++) {
-                if (i * 10 < points[j] && i * 10 + 10 > points[j])
-
+                if (i == Math.floor((double)points[j] / 10))
                     histo[i] += "*";
+                else if(points[j] == 100)
+                    histo[9] += "*";
             }
         }
 
