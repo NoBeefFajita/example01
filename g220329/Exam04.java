@@ -3,13 +3,15 @@ package example01.g220329;
 import java.util.Scanner;
 
 public class Exam04 {
-    public static void main(String[] args) {
-        int randomNum = (int)(Math.random()*90)+10;
-        int userNum;
-        Scanner sc = new Scanner(System.in);
+
+    public static void game() {
 
         System.out.println("숫자맞추기 게임 시작!");
         System.out.println("10부터 99까지 숫자를 맞추세요");
+        
+        int randomNum = (int)(Math.random()*90)+10;
+        int userNum;
+        Scanner sc = new Scanner(System.in);
 
         do{
             System.out.print("어떤 숫자일까? ");
@@ -24,5 +26,9 @@ public class Exam04 {
                 break;
             }
         } while (true);
+    }
+
+    public static void main(String[] args) {
+        game();
     }
 }
