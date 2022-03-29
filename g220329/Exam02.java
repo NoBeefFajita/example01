@@ -6,11 +6,7 @@ public class Exam02 {
         int b = 35;
         int c = 42;
 
-        System.out.println("정수 a : " + a);
-        System.out.println("정수 b : " + b);
-        System.out.println("정수 c : " + c);
-
-        System.out.println("a < b < c 가 되도록 정렬 했습니다.");
+        intList(a,b,c);
 
         if(a > b) {
             int t = a;
@@ -28,9 +24,14 @@ public class Exam02 {
             c = t;
         }
 
-        System.out.println("변수 a : " + a);
-        System.out.println("변수 b : " + b);
-        System.out.println("변수 c : " + c);
+        System.out.println("a < b < c 가 되도록 정렬 했습니다.");
+        intList(a,b,c);
 
+    }
+    
+    public static void intList(int a, int b, int c) {
+        System.out.println("정수 a : " + a);
+        System.out.println("정수 b : " + b);
+        System.out.println("정수 c : " + c);
     }
 }
