@@ -6,9 +6,11 @@ public class Exam08 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        mentalArithmeticTrainingProgram();
+    }
 
+    public static void mentalArithmeticTrainingProgram() {
         for(;;) {
-
             int x = (int)(Math.random()*900+100);          // 3자리 정수형 난수 3개
             int y = (int)(Math.random()*900+100);
             int z = (int)(Math.random()*900+100);
@@ -25,8 +27,7 @@ public class Exam08 {
                 cal4(x, y, z);
 
             System.out.print("다시한번? ");      // 1 no
-            boolean again = sc.nextInt() == 1;
-            if(again)
+            if(sc.nextInt() == 1)
                 break;
         }
     }
