@@ -9,9 +9,11 @@ public class Exam05 {
 
         if(value % 3 == 0) {
             System.out.println("「3의 배수입니다」");
-        } else if(value % 4 == 0) {
+        }
+        if(value % 4 == 0) {
             System.out.println("「4의 배수입니다」");
-        } else if(value % 5 == 0) {
+        }
+        if(value % 5 == 0) {
             System.out.println("「5의 배수입니다」");
         }
     }
