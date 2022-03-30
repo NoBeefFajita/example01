@@ -4,6 +4,9 @@ public class Exam05 {
 
     public static int[] arrayIntOf(int[] a, int idx, int x) {   // 배열 a의 인덱스 idx에 값 x를 추가하는 메소드
 
+        System.out.println("삽입할 인덱스: " + idx);
+        System.out.println("삽입할 값: " + x);
+        
         int[] b = new int[a.length+1];          // 배열 a 보다 요소수+1 인 배열 b 
 
         for(int i = 0; i < b.length; i++) {     // 배열 b 초기화
@@ -28,19 +31,16 @@ public class Exam05 {
 
     public static void main(String[] args) {
 
-        int index = 2;
-        int element = 99;
+        int idx = 2;
+        int x = 99;
 
         System.out.println("요소수: 6");
         int[] a = {1, 3, 4, 7, 9, 11};
 
         arrayElementPrint(a, "x");          // 배열 a 출력
 
-        System.out.println("삽입할 인덱스: " + index);
-        System.out.println("삽입할 값: " + element);
+        int[] b = arrayIntOf(a, idx, x);
 
-        int[] b = arrayIntOf(a, index, element);
-
-       arrayElementPrint(b, "y");           // 배열 b 출력
+        arrayElementPrint(b, "y");           // 배열 b 출력
     }
 }
