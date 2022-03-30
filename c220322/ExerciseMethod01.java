@@ -1,4 +1,4 @@
-package example01.example20220322;
+package example01.c220322;
 
 public class ExerciseMethod01 {
     public static void main(String[] args) {
