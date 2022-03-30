@@ -2,7 +2,7 @@ package example01.h220330;
 
 public class Exam03 {
 
-    public static int med (int a, int b, int c) {
+    public static int med (int a, int b, int c) {       // 중간값 구하기 메소드
         if(a <= b){
             if(a <= c){
                 if(b <= c){
