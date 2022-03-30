@@ -19,6 +19,12 @@ public class Exam05 {
 
         return b;
     }
+    
+    public static void arrayElementPrint(int[] a, String x) {       // 배열 요소 출력 메소드
+        for(int i = 0; i < a.length; i++) {
+            System.out.println(x + "[" + i + "]:" + a[i]);
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -28,17 +34,13 @@ public class Exam05 {
         System.out.println("요소수: 6");
         int[] a = {1, 3, 4, 7, 9, 11};
 
-        for(int i = 0; i < a.length; i++) {                 // 배열 a 출력
-            System.out.println("x[" + i + "]:" + a[i]);
-        }
+        arrayElementPrint(a, "x");          // 배열 a 출력
 
         System.out.println("삽입할 인덱스: " + index);
         System.out.println("삽입할 값: " + element);
 
         int[] b = arrayIntOf(a, index, element);
 
-        for(int i = 0; i < b.length; i++) {                 // 배열 b 출력
-            System.out.println("y[" + i + "]:" + b[i]);
-        }
+       arrayElementPrint(b, "y");           // 배열 b 출력
     }
 }
