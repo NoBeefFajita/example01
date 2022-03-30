@@ -1,4 +1,4 @@
-package youngJun.java.day15.exam;
+package example01.g220329;
 
 public class Exam05 {
     public static void main(String[] args) {
