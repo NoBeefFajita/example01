@@ -14,7 +14,7 @@ public class Exam04 {
         System.out.println("하한값: " + a);
         System.out.println("상한값: " + b);
 
-        return rd.nextInt(a,b + 1);
+        return rd.nextInt(a,b + 1);         // a이상 b 이하 난수
     }
 
     public static void main(String[] args) {
