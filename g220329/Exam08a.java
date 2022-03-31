@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exam08 {
+public class Exam08a {
     static Scanner sc = new Scanner(System.in);
 
     public static boolean retry() {
