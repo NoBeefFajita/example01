@@ -23,12 +23,7 @@ public class Member {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Member) {
-            Member tmp = (Member) obj;
-            if (this.id == tmp.id) {
-                return true;
-            }
-        }
-        return false;
+        Member tmp = (Member) obj;
+        return this.id == tmp.id;
     }
 }
