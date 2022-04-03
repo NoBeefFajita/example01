@@ -1,0 +1,23 @@
+연습문제 8
+문제1
+FileCopyPractice 클래스의 main 메소드는 미완성입니다.
+한 텍스트 파일의 내용을 다른 텍스트 파일로 복사하는 프로그램을 만듭니다.
+그 방법은, 복사원 파일로부터 FileReader 클래스와 BufferedReader 클래스를 잘 사용해 데이터를
+읽어내, 그 데이터를 복사처 파일에 FileWriter 클래스와 BufferedWriter 클래스와 PrintWriter 클래스
+를 잘 사용해 기입합니다.
+원본 파일 이름과 대상 파일 이름을 지정하려면 명령줄 인수를 사용합니다.
+[실행예]
+> java FileCopyPractice 복사 소스 파일 이름 복사 대상 파일 이름
+명령프롬프트에서 틀린 경우 (두 개의 문자열이 통과하지 못함), "두 개의 파일 이름을 올바르게
+지정하십시오."라고 표시하여 프로그램을 종료합니다.
+복사 소스 파일을 찾을 수 없으면 FileNotFoundException이 발생합니다.
+그 때는 「파일명의 지정이 부정합니다」라고 표시해 프로그램을 종료합니다.
+그 이외에 IOException 가 슬로우 되므로, 그 때는 「입출력 에러입니다」라고 표시해 프로그램을
+종료합니다.
+열린 파일은 제대로 닫아야 합니다
+FileCopyPractice.java
+public class FileCopyPractice {
+ public static void main(String[] args) {
+ // 여기에 파일 복사 처리를 작성하십시오.
+ }
+}
