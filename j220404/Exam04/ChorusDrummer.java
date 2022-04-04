@@ -8,7 +8,7 @@ public class ChorusDrummer extends Musician implements Singable,Playable{
 
     @Override
     public void sing() {
-        System.out.println(getName() + "는 코러스를 연주했습니다!");
+        System.out.println(getName() + "는 코러스로 연주했습니다!");
     }
 
     @Override

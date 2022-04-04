@@ -14,13 +14,13 @@ public class Practice3 {
             System.out.println(athlete[i]);
         }
         System.out.println();
-        for (Athlete type: athlete) {            // 여기에서 일하십시오.
 
+        for (Athlete type: athlete) {            // 여기에서 일하십시오.
             if(type instanceof Swimmer)          // 운동 선수의 종목에 따라 메소드 실행
-                ((Swimmer) type).swim();
+                ((Swimmer)type).swim();
 
             if(type instanceof MarathonRunner)
-                ((MarathonRunner) type).run();
+                ((MarathonRunner)type).run();
         }
     }
 }

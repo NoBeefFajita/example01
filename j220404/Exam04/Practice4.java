@@ -10,14 +10,12 @@ public class Practice4 {
                 new ChorusDrummer( "이빛나" )
         };
         // 뮤직 스타트!
-
         for(Musician a : band) {
             if(a instanceof Singable)
-                ((Singable) a).sing();
+                ((Singable)a).sing();
 
             if(a instanceof Playable)
-                ((Playable) a).play();
+                ((Playable)a).play();
         }
-
     }
 }
