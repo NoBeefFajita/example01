@@ -2,14 +2,14 @@ package example01.i220401.Exam03;
 
 public class Picture {
 
-    private String target;  // ÇÇ»çÃ¼
-    // »ı¼ºÀÚ
+    private String target;  // í”¼ì‚¬ì²´
+    // ìƒì„±ì
     public Picture(String target) {
         this.target = target;
     }
 
     @Override
     public String toString() {
-        return target + "ÀÇ È­»ó";
+        return target + "ì˜ í™”ìƒ";
     }
 }

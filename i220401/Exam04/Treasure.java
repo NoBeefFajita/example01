@@ -1,7 +1,7 @@
 package example01.i220401.Exam04;
 
 public class Treasure {
-    private String type;    // º¸¹°ÀÇ À¯Çü
+    private String type;    // ë³´ë¬¼ì˜ ìœ í˜•
 
     public Treasure(String type) {
         this.type = type;

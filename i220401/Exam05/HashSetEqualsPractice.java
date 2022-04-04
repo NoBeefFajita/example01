@@ -4,17 +4,17 @@ import java.util.*;
 
 public class HashSetEqualsPractice {
     public static void main(String[] args) {
-        // ±×·ì °á¼º
+        // ê·¸ë£¹ ê²°ì„±
         HashSet<Member> group = new HashSet<Member>();
-        // È¸¿ø Ãß°¡
-        group.add( new Member( 1 , "È«±æµ¿" ));
-        group.add( new Member( 2 , "ÀÌ¼ø½Å" ));
-        group.add( new Member( 3 , "¿¬°³¼Ò¹®" ));
-        group.add( new Member( 4 , "±¤°³Åä´ë¿Õ" ));
-        group.add( new Member( 5 , "¼¼Á¾´ë¿Õ" ));
-        // ÀÓ½Ã ¸â¹ö·Î Ãß°¡!
-        group.add( new Member( 1 , "±èÀç¿ì" ));
-        // ¸â¹ö ¼Ò°³
+        // íšŒì› ì¶”ê°€
+        group.add( new Member( 1 , "í™ê¸¸ë™" ));
+        group.add( new Member( 2 , "ì´ìˆœì‹ " ));
+        group.add( new Member( 3 , "ì—°ê°œì†Œë¬¸" ));
+        group.add( new Member( 4 , "ê´‘ê°œí† ëŒ€ì™•" ));
+        group.add( new Member( 5 , "ì„¸ì¢…ëŒ€ì™•" ));
+        // ì„ì‹œ ë©¤ë²„ë¡œ ì¶”ê°€!
+        group.add( new Member( 1 , "ê¹€ì¬ìš°" ));
+        // ë©¤ë²„ ì†Œê°œ
         for (Member member : group) {
             System.out.println(member);
         }

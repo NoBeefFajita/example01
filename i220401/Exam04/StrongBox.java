@@ -13,7 +13,7 @@ public class StrongBox {
         if(this.treasure.containsKey(secret)) {
             throw new DuplicateSecretException();
         } else {
-            System.out.println(treasure + "¸¦ ±İ°í¿¡ ÀúÀåÇß½À´Ï´Ù!");
+            System.out.println(treasure + "ë¥¼ ê¸ˆê³ ì— ì €ì¥í–ˆìŠµë‹ˆë‹¤!");
             this.treasure.put(secret,treasure);
         }
     }

@@ -11,14 +11,14 @@ public class DigitalCamera {
     }
 
     public void takePicture(String target) {
-        System.out.println(target + "À» ÃÔ¿µÇß½À´Ï´Ù.");
+        System.out.println(target + "ì„ ì´¬ì˜í–ˆìŠµë‹ˆë‹¤.");
         this.memory.add(target);
     }
 
     public void showPictures() {
-        System.out.println("¡Ú¡Ù ÀÌ¹ÌÁö ÀÏ¶÷ ¡Ù¡Ú");
+        System.out.println("â˜…â˜† ì´ë¯¸ì§€ ì¼ëŒ â˜†â˜…");
         for(String target : memory) {
-            System.out.println(target + "ÀÌ¹ÌÁö");
+            System.out.println(target + "ì´ë¯¸ì§€");
         }
     }
 
@@ -28,7 +28,7 @@ public class DigitalCamera {
 
     public void clearMemory() {
         memory.clear();
-        System.out.println("¸ğµç ÀÌ¹ÌÁö¸¦ »èÁ¦Çß½À´Ï´Ù.");
+        System.out.println("ëª¨ë“  ì´ë¯¸ì§€ë¥¼ ì‚­ì œí–ˆìŠµë‹ˆë‹¤.");
     }
 
 

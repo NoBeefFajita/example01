@@ -2,42 +2,42 @@ package example01.i220401.Exam04;
 
 public class HashMapNormalPractice {
     public static void main(String[] args) {
-        // ±İ°í ÀÎ½ºÅÏ½º ¸¸µé±â
+        // ê¸ˆê³  ì¸ìŠ¤í„´ìŠ¤ ë§Œë“¤ê¸°
         StrongBox guard = new StrongBox();
-        // ºñ¹Ğ ´Ü¾î º¯¼ö ¼±¾ğ
+        // ë¹„ë°€ ë‹¨ì–´ ë³€ìˆ˜ ì„ ì–¸
         String secret = null ;
         try {
-            // Ã¹ ¹øÂ° º¸¹° ÀúÀå
+            // ì²« ë²ˆì§¸ ë³´ë¬¼ ì €ì¥
             secret = "sgf01" ;
-            guard.store(secret, new Treasure( "´ÙÀÌ¾î¸µ" ));
-            // µÎ ¹øÂ° º¸¹°À» ÀúÀå
+            guard.store(secret, new Treasure( "ë‹¤ì´ì–´ë§" ));
+            // ë‘ ë²ˆì§¸ ë³´ë¬¼ì„ ì €ì¥
             secret = "zkq02" ;
-            guard.store(secret, new Treasure( "ÁøÁÖ ¸ñ°ÉÀÌ" ));
-            // ¼¼ ¹øÂ° º¸¹°À» ÀúÀå
+            guard.store(secret, new Treasure( "ì§„ì£¼ ëª©ê±¸ì´" ));
+            // ì„¸ ë²ˆì§¸ ë³´ë¬¼ì„ ì €ì¥
             secret = "xrt03" ;
-            guard.store(secret, new Treasure( "±İ ÆÈÂî" ));
-            // ³× ¹øÂ° º¸¹°À» ÀúÀå (ºñ¹Ğ ´Ü¾î Áßº¹)
+            guard.store(secret, new Treasure( "ê¸ˆ íŒ”ì°Œ" ));
+            // ë„¤ ë²ˆì§¸ ë³´ë¬¼ì„ ì €ì¥ (ë¹„ë°€ ë‹¨ì–´ ì¤‘ë³µ)
             secret = "xrt03" ;
-            guard.store (secret, new Treasure ( "¹é±İ ±Í°ÉÀÌ" ));
+            guard.store (secret, new Treasure ( "ë°±ê¸ˆ ê·€ê±¸ì´" ));
         } catch (DuplicateSecretException e) {
-            System.out.println( "ºñ¹Ğ ´Ü¾î " +secret + "´Â ÀÌ¹Ì ºÙ¾î ÀÖ½À´Ï´Ù" );
+            System.out.println( "ë¹„ë°€ ë‹¨ì–´ " +secret + "ëŠ” ì´ë¯¸ ë¶™ì–´ ìˆìŠµë‹ˆë‹¤" );
         }
         System.out.println();
         try {
-            // Ã¹ ¹øÂ° º¸¹° È¹µæ
+            // ì²« ë²ˆì§¸ ë³´ë¬¼ íšë“
             secret = "sgf01" ;
             Treasure treasure1 = guard.getTreasure(secret);
-            System.out.println(treasure1 + "À» ¹Ş¾Ò½À´Ï´Ù!" );
-            // µÎ ¹øÂ° º¸¹° È¹µæ
+            System.out.println(treasure1 + "ì„ ë°›ì•˜ìŠµë‹ˆë‹¤!" );
+            // ë‘ ë²ˆì§¸ ë³´ë¬¼ íšë“
             secret = "zkq02" ;
             Treasure treasure2 = guard.getTreasure(secret);
-            System.out.println(treasure2 + "À» ¹Ş¾Ò½À´Ï´Ù!" );
-            // ¼¼ ¹øÂ° º¸¹°À» ¾ò´Â´Ù (ºñ¹ĞÀÇ ¸»ÀÌ ºÎÁ¤)
+            System.out.println(treasure2 + "ì„ ë°›ì•˜ìŠµë‹ˆë‹¤!" );
+            // ì„¸ ë²ˆì§¸ ë³´ë¬¼ì„ ì–»ëŠ”ë‹¤ (ë¹„ë°€ì˜ ë§ì´ ë¶€ì •)
             secret = "xrr03" ;
             Treasure treasure3 = guard.getTreasure(secret);
-            System.out.println(treasure3 + "À» ¹Ş¾Ò½À´Ï´Ù!" );
+            System.out.println(treasure3 + "ì„ ë°›ì•˜ìŠµë‹ˆë‹¤!" );
         } catch (IllegalSecretException e) {
-            System.out.println( "ºñ¹Ğ ´Ü¾î " + secret + "´Â ¾Ç¼º" );
+            System.out.println( "ë¹„ë°€ ë‹¨ì–´ " + secret + "ëŠ” ì•…ì„±" );
         }
     }
 }

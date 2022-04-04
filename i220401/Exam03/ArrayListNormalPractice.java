@@ -2,25 +2,25 @@ package example01.i220401.Exam03;
 
 public class ArrayListNormalPractice {
     public static void main(String[] args) {
-        // µğÁöÅĞ Ä«¸Ş¶ó °´Ã¼ ¼±¾ğ ¹× »ı¼º
+        // ë””ì§€í„¸ ì¹´ë©”ë¼ ê°ì²´ ì„ ì–¸ ë° ìƒì„±
         DigitalCamera myCamera = new DigitalCamera();
-        // µğÁöÅĞ Ä«¸Ş¶ó·Î ÃÔ¿µ
-        myCamera.takePicture( "»õ³¢ °í¾çÀÌ" );
-        myCamera.takePicture( "·±Ä¡" );
-        myCamera.takePicture( "Ä«ÇªÄ¡³ë" );
-        myCamera.takePicture( "¾Æ±â" );
-        myCamera.takePicture( "Åõ¼¦" );
+        // ë””ì§€í„¸ ì¹´ë©”ë¼ë¡œ ì´¬ì˜
+        myCamera.takePicture( "ìƒˆë¼ ê³ ì–‘ì´" );
+        myCamera.takePicture( "ëŸ°ì¹˜" );
+        myCamera.takePicture( "ì¹´í‘¸ì¹˜ë…¸" );
+        myCamera.takePicture( "ì•„ê¸°" );
+        myCamera.takePicture( "íˆ¬ìƒ·" );
         System.out.println();
-        // ÃÔ¿µ ÀÌ¹ÌÁö ¼ö È®ÀÎ
-        System.out.println( "ÇöÀç ÃÔ¿µ ¸Å¼ö:" + myCamera.getPictureCount());
+        // ì´¬ì˜ ì´ë¯¸ì§€ ìˆ˜ í™•ì¸
+        System.out.println( "í˜„ì¬ ì´¬ì˜ ë§¤ìˆ˜:" + myCamera.getPictureCount());
         System.out.println();
-        // ÀÌ¹ÌÁö º¸±â
+        // ì´ë¯¸ì§€ ë³´ê¸°
         myCamera.showPictures();
         System.out.println();
-        // ÀÌ¹ÌÁö ÆÄÀÏ Áö¿ì±â
+        // ì´ë¯¸ì§€ íŒŒì¼ ì§€ìš°ê¸°
         myCamera.clearMemory();
         System.out.println();
-        // ÃÔ¿µ ÀÌ¹ÌÁö ¼ö ÀçÈ®ÀÎ
-        System.out.println( "ÇöÀç ÃÔ¿µ ¸Å¼ö:" + myCamera.getPictureCount());
+        // ì´¬ì˜ ì´ë¯¸ì§€ ìˆ˜ ì¬í™•ì¸
+        System.out.println( "í˜„ì¬ ì´¬ì˜ ë§¤ìˆ˜:" + myCamera.getPictureCount());
     }
 }

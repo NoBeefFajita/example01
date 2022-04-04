@@ -3,9 +3,9 @@ package example01.i220401.Exam05;
 
 public class Member {
     private int id; // ID
-    private String name; // ÀÌ¸§
+    private String name; // ì´ë¦„
 
-    // »ı¼ºÀÚ
+    // ìƒì„±ì
     public Member(final int id, final String name) {
         this.id = id;
         this.name = name;

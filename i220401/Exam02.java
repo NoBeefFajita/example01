@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Exam02 {
     public static void main(String[] args) {
-        // ¿µ¼ıÀÚ ´Ü¾î ÀúÀå¿ë º¯¼ö ¼±¾ğ ¹× ArrayList °´Ã¼ »ı¼º
+        // ì˜ìˆ«ì ë‹¨ì–´ ì €ì¥ìš© ë³€ìˆ˜ ì„ ì–¸ ë° ArrayList ê°ì²´ ìƒì„±
         ArrayList<String> number = new ArrayList<String>();
-        // ¿µ¼ıÀÚ ´Ü¾î ÀúÀå
+        // ì˜ìˆ«ì ë‹¨ì–´ ì €ì¥
         number.add( "zero" );
         number.add( "one" );
         number.add( "two" );
@@ -18,28 +18,28 @@ public class Exam02 {
         number.add( "eight" );
         number.add( "nine" );
         number.add( "ten" );
-        // ¿µ¾î ´Ü¾î ÀÔ·Â
-        System.out.println ( "0¿¡¼­ 10±îÁöÀÇ ¿µ¹® ´Ü¾î¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À" );
+        // ì˜ì–´ ë‹¨ì–´ ì…ë ¥
+        System.out.println ( "0ì—ì„œ 10ê¹Œì§€ì˜ ì˜ë¬¸ ë‹¨ì–´ë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤" );
         String input = System.console().readLine();
-        // ¿©±â¿¡¼­ ÄÚµùÇÏ½Ê½Ã¿À.
-        // input °ú ÀÏÄ¡ È®ÀÎ
+        // ì—¬ê¸°ì—ì„œ ì½”ë”©í•˜ì‹­ì‹œì˜¤.
+        // input ê³¼ ì¼ì¹˜ í™•ì¸
 //        int inputIdx = number.indexOf(input);
 //
 //        if(inputIdx != -1) {
-//            System.out.printf("%s´Â ¼ıÀÚÀÇ %d\n", input, inputIdx);
+//            System.out.printf("%sëŠ” ìˆ«ìì˜ %d\n", input, inputIdx);
 //        } else {
-//            System.out.println(inputIdx + "Àº ¿µ¾î ´Ü¾î·Î Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+//            System.out.println(inputIdx + "ì€ ì˜ì–´ ë‹¨ì–´ë¡œ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 //        }
 
         boolean check = true;
 
         for(int i = 0; i < number.size(); i++) {
             if(number.get(i).equals(input)) {
-                System.out.printf("%s´Â ¼ıÀÚÀÇ %d\n", input, i);
+                System.out.printf("%sëŠ” ìˆ«ìì˜ %d\n", input, i);
                 check = false;
             }
         }
         if(check)
-            System.out.println(input + "Àº ¿µ¾î ´Ü¾î·Î Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+            System.out.println(input + "ì€ ì˜ì–´ ë‹¨ì–´ë¡œ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
     }
 }
