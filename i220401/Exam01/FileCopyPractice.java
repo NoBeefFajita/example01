@@ -10,13 +10,11 @@ public class FileCopyPractice {
         */
         try {
             Console cmd = System.console();
-            String sourceFileName = cmd.readLine("복사 소스 이름: "); // "example01/i220401/files/originFile.txt"
-            String copiedFileName = cmd.readLine("복사 대상 파일 이름: ");
 
             String strLine;                                     // 1행 데이터 저장용
             ArrayList<String> strList = new ArrayList<>();      // 데이터 분할 저장용
             // 읽기 열기
-            BufferedReader br = new BufferedReader(new FileReader(sourceFileName));
+            BufferedReader br = new BufferedReader(new FileReader(args[0]));
             // 전체 문서 strList 에 저장
             while ((strLine = br.readLine()) != null) {
                 strList.add(strLine);
@@ -25,7 +23,7 @@ public class FileCopyPractice {
             br.close();
 
             // 복사 파일 만들기
-            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(copiedFileName)));
+            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(args[1])));
             // 붙여넣기
             for(int i = 0; i < strList.size(); i++) {
                 pw.println(strList.get(i));
