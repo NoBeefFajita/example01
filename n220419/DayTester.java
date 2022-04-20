@@ -41,13 +41,9 @@ public class DayTester {
     private static Day newDay() {
         System.out.print("""
                           날짜를 입력하세요
-                          년도:\s""");
-        int year = sc.nextInt();
-        System.out.print("월: ");
-        int month = sc.nextInt();
-        System.out.print("일: ");
-        int day = sc.nextInt();
-
+                          년도:\s"""); int year = sc.nextInt();
+        System.out.print("월: "); int month = sc.nextInt();
+        System.out.print("일: "); int day = sc.nextInt();
         return new Day(year, month, day);
     }
 
