@@ -7,7 +7,7 @@ public class Day {
     private int year,
                 month,
                 day;
-    private final List<Integer> monthDay = List.of(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+    private final List<Integer> MONTHDAY = List.of(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 
     /**
      * 생성자
@@ -34,6 +34,10 @@ public class Day {
         this(year,month);
         this.day = day;
         invalidArgument(year, month, day);
+    }
+    
+    public Day(Day d) {
+        this(d.year, d.month, d.day);
     }
 
     /**
@@ -69,23 +73,17 @@ public class Day {
         if(month < 1) this.month = 1;
     }
 
-    private void invalidArgument(int year, int month, int day) {
+   private void invalidArgument(int year, int month, int day) {
         invalidArgument(year);
         invalidArgument(year, month);
+        if(day < 1) this.day = 1;
         switch(month) {
-            case 1, 3, 5, 7, 8, 10, 12 -> {
-                if(day > 31) this.day = 31;
-                else if(day < 1) this.day = 1;
-            }
-            case 4,6,9,11 -> {
-                if(day > 30) this.day = 30;
-                else if(day < 1) this.day = 1;
-            }
+            case 1, 3, 5, 7, 8, 10, 12 -> { if(day > 31) this.day = 31; }
+            case 4,6,9,11 -> { if(day > 30) this.day = 30; }
             case 2 -> {
                 if(leapYear(year)) {
                     if(day > 29) this.day = 29;
                 } else if(day > 28) this.day = 28;
-                if(day < 1) this.day = 1;
             }
         }
     }
@@ -128,7 +126,7 @@ public class Day {
      * 연내의 경과 일수 메소드
      */
     public int dayOfYear() {
-        int days = monthDay.stream()
+        int days = MONTHDAY.stream()
                 .limit(month - 1)
                 .mapToInt(Integer::intValue)
                 .sum()
@@ -153,7 +151,7 @@ public class Day {
      *          0 : 동일한 날
      *          1 : 다음날
      */
-    public int compareDay(int year, int month, int day) {
+    public int compareDate(int year, int month, int day) {
         if(this.year < year) return 1;
         else if(this.year > year) return -1;
         else {
@@ -163,24 +161,28 @@ public class Day {
 
         }
     }
+    
+    public int compareDate(Day targetDate) {
+        int y = targetDate.getYear(),
+            m = targetDate.getMonth(),
+            d = targetDate.getDay();
+        return compareDate(y, m, d);
+    }
 
     /**
      * 클래스 메소드:
      * @param referenceDate 기준일
      * @param targetDate 비교일
      */
-    public static int compareDay(Day referenceDate, Day targetDate) {
-        int y = targetDate.getYear(),
-            m = targetDate.getMonth(),
-            d = targetDate.getDay();
-        return referenceDate.compareDay(y, m, d);
+    public static int compareDate(Day referenceDate, Day targetDate) {
+        return referenceDate.compareDate(targetDate);
     }
 
     /**
      * 날짜를 하루 뒤로 변경하는 메소드
      */
     public void nextDays() {
-        if(monthDay.get(month - 1) == day) {
+        if(MONTHDAY.get(month - 1) == day) {
             if(month == 12) {
                 setYear(year + 1);
                 setMonth(1);
@@ -212,7 +214,7 @@ public class Day {
             } else {
                 setMonth(month - 1);
             }
-            setDay(monthDay.get(month - 1));
+            setDay(MONTHDAY.get(month - 1));
         } else setDay(day - 1);
     }
 
@@ -230,6 +232,7 @@ public class Day {
      * 날짜를 n일 뒤로 변경하는 메소드
      */
     public void plusDays(int n) {
+        if(n <= 0) return;
         nextDays();
         n--;
         if(n > 0) plusDays(n);
@@ -248,6 +251,7 @@ public class Day {
      * 날짜를 n일 앞으로 변경하는 메소드
      */
     public void minusDays(int n) {
+        if(n <= 0) return;
         previousDay();
         n--;
         if(n > 0) minusDays(n);
