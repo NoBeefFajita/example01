@@ -79,7 +79,7 @@ public class DayTester {
      */
     public static void ch3(Day d) {
         Day day2 = newDay();
-        int c = Day.compareDay(d,day2);
+        int c = Day.compareDate(d,day2);
         if(c == 1) System.out.printf("%s는 %s보다 이후의 날입니다.\n", day2, d);
         else if(c == -1) System.out.printf("%s는 %s보다 이전의 날입니다.\n", day2, d);
         else System.out.printf("%s는 %s과 동일한 날입니다.\n", day2, d);
